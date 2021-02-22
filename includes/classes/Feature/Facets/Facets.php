@@ -419,7 +419,7 @@ class Facets extends Feature {
 		 */
 		$query_string = apply_filters( 'ep_facet_query_string', $query_string );
 
-		if ( is_post_type_archive() ) {
+		if ( is_post_type_archive() || is_product_category() || is_product_tag()) {
 			$pagination = strpos( $_SERVER['REQUEST_URI'], '/page' );
 
 			if ( false !== $pagination ) {
